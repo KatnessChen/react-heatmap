@@ -27,4 +27,4 @@ const purples: HEX[] = [
   "#9400D3",
 ];
 
-export { blues, purples };
+export { reds, blues, purples };
