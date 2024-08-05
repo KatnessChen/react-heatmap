@@ -1,5 +1,14 @@
 import { HEX } from "../type";
 
+const reds: HEX[] = [
+  "#F08080",
+  "#FA8072",
+  "#FF6347",
+  "#DD0000",
+  "#B22222",
+  "#8B0000",
+];
+
 const blues: HEX[] = [
   "#ADD8E6",
   "#87CEEB",
