@@ -1,4 +1,15 @@
-const purples = [
+import { HEX } from "../type";
+
+const blues: HEX[] = [
+  "#ADD8E6",
+  "#87CEEB",
+  "#1E90FF",
+  "#6495ED",
+  "#4169E1",
+  "#0000CD",
+];
+
+const purples: HEX[] = [
   "#E6E6FA",
   "#D8BFD8",
   "#9370DB",
@@ -7,4 +18,4 @@ const purples = [
   "#9400D3",
 ];
 
-export { purples };
+export { blues, purples };

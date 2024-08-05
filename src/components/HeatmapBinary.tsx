@@ -1,10 +1,10 @@
-import { purples } from "../const/color";
+// import { purples } from "../const/color";
 import { colorCreatorFn } from "../utils";
 import HeatmapPropType from "./type";
 
-function HeatmapBinary({ width, height, dataList }: HeatmapPropType) {
-  const bgColor = colorCreatorFn(purples);
-  const textColor = colorCreatorFn(purples, 3);
+function HeatmapBinary({ width, height, dataList, colors }: HeatmapPropType) {
+  const bgColor = colorCreatorFn(colors);
+  const textColor = colorCreatorFn(colors, 3);
 
   const totalSize = width * height;
   const remaining = [width, height]; // remaining of width, remaining of height
@@ -48,7 +48,11 @@ function HeatmapBinary({ width, height, dataList }: HeatmapPropType) {
     return result;
   });
 
-  return rects;
+  return (
+    <svg width={width} height={height}>
+      {rects}
+    </svg>
+  );
 }
 
 export default HeatmapBinary;

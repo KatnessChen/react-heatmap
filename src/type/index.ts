@@ -8,4 +8,6 @@ type DataList = DataItem[];
 
 type PartitionAlgorithm = "sliced" | "diced" | "squarify" | "binary";
 
-export type { DataItem, DataList, PartitionAlgorithm };
+type HEX = `#${string}`;
+
+export type { DataItem, DataList, PartitionAlgorithm, HEX };

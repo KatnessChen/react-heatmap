@@ -1,10 +1,9 @@
-import { purples } from "../const/color";
 import { colorCreatorFn } from "../utils";
 import HeatmapPropType from "./type";
 
-function HeatmapSlice({ width, height, dataList }: HeatmapPropType) {
-  const bgColor = colorCreatorFn(purples);
-  const textColor = colorCreatorFn(purples, 3);
+function HeatmapSlice({ width, height, dataList, colors }: HeatmapPropType) {
+  const bgColor = colorCreatorFn(colors);
+  const textColor = colorCreatorFn(colors, 3);
   const totalSize = width * height;
   let offset = 0;
 
@@ -44,7 +43,11 @@ function HeatmapSlice({ width, height, dataList }: HeatmapPropType) {
     return result;
   });
 
-  return rects;
+  return (
+    <svg width={width} height={height}>
+      {rects}
+    </svg>
+  );
 }
 
 export default HeatmapSlice;
